@@ -9,7 +9,7 @@ It will create the following resources:
  - Postgres as a DB backend (later replaces with ClickHouse)
  - Grafana as a Dashboard
 
-At the moment only the spark job and airflow scheduler are in the finished state
-Security is insured via 
+At the moment only the spark job and airflow scheduler are in the finished state /spark/pull_aggregate.py
+Security is prod and stage is insured via providing  Kubernetes secrets
 
     
