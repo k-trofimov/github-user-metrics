@@ -1,5 +1,6 @@
+import os
 
-DATA_HOST = "data.gharchive.org"
+DATA_HOST = os.environ["DATA_HOST"] # "data.gharchive.org"
 GH_FILE_URL_TEMPLATE = "https://{data_host}/{date_hour}.json.gz"
 POSTGRES_JDBC_PATH = "./drivers/postgresql-42.5.0.jar"
 SPARK_APP_NAME = "gh-data-processor"
@@ -24,8 +25,8 @@ class DB_Tables:
     USERS = "Users"
     COMMITS = "Commits"
 class DB_Creds:
-    HOST ="host"
-    PORT = "port"
-    NAME = "name"
-    USER = "user"
-    PASSWORD = "password"
+    HOST = os.environ["db_host"]
+    PORT = os.environ["db_port"]
+    NAME = os.environ["db_name"]
+    USER = os.environ["db_user"]
+    PASSWORD = os.environ["db_password"]
